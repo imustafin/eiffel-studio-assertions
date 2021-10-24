@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<system xmlns="http://www.eiffel.com/developers/xml/configuration-1-20-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eiffel.com/developers/xml/configuration-1-20-0 http://www.eiffel.com/developers/xml/configuration-1-20-0.xsd" name="contract_variants" uuid="FB1A76BA-D4AA-49C8-A1A9-90891BB82853">
+	<target name="contract_variants">
+		<root class="APPLICATION" feature="make"/>
+		<file_rule>
+			<exclude>/CVS$</exclude>
+			<exclude>/EIFGENs$</exclude>
+			<exclude>/\.git$</exclude>
+			<exclude>/\.svn$</exclude>
+		</file_rule>
+		<option warning="true" manifest_array_type="mismatch_warning">
+			<assertions precondition="true" postcondition="true" check="true" invariant="true" loop="true" supplier_precondition="true"/>
+		</option>
+		<setting name="console_application" value="true"/>
+		<setting name="dead_code_removal" value="feature"/>
+		<capability>
+			<catcall_detection support="none"/>
+			<concurrency support="none"/>
+			<void_safety support="all"/>
+		</capability>
+		<precompile name="base_pre" location="$ISE_PRECOMP\base-safe.ecf"/>
+		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
+		<library name="other_library" location="..\other_library\other_library.ecf">
+			<option>
+				<assertions postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false" precondition="false"/>
+			</option>
+		</library>
+		<cluster name="main" location=".\main\">
+			<option>
+				<assertions postcondition="false" check="false" invariant="true" loop="false" supplier_precondition="false" precondition="false"/>
+			</option>
+			<cluster name="subcluster" location=".\main\subcluster\"><option><assertions precondition="false" postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false"/></option></cluster>
+		</cluster>
+		<cluster name="indirect_cluster" location=".\indirect_cluster\">
+			<option>
+				<assertions postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false" precondition="false"/>
+			</option>
+		</cluster>
+		<cluster name="other_cluster" location=".\other_cluster\">
+			<option>
+				<assertions postcondition="false" check="false" invariant="false" loop="false" supplier_precondition="false" precondition="false"/>
+			</option>
+		</cluster>
+	</target>
+</system>
