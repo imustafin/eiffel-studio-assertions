@@ -1,5 +1,8 @@
 # EiffelStudio Assertions Cheatsheet
 
+Please see the [EiffelStudio Assertions Setting](https://imustafin.tatar/en/blog/eiffelstudio-assertions-setting)
+blog post for the detailed discussion of the results and the code!
+
 This repository shows which contracts are actually evaluated for different
 settings in the **Assertions** group in **Project Settings**
 (Project > Project Settings > Target: x > Assertions). The results
